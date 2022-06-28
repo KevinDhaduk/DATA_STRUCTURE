@@ -30,24 +30,24 @@
 					if(b==0){
 						for(int j=1;j<n;j++){
 
-						if(temp==a[j]){
-							count++;
+							if(temp==a[j]){
+								count++;
+							}
+							else if(count>=3){
+								temp=a[j];
+								count=1;
+							}
+							else {
+								flag=true;
+							}
 						}
-						else if(count>=3){
-							temp=a[j];
-							count=1;
-						}
-						else {
-							flag=true;
-						}
-				}
 
-				if(flag){
-					return 0;
-				}
-				else{
-					return 1;
-				}
+						if(flag){
+							return 0;
+						}
+						else{
+							return 1;
+						}
 					}
 					else{
 						return 0;
